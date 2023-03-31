@@ -9,8 +9,8 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 
 type OmitOnActionProps<T> = Omit<T, `on${string}`>;
 
-function isJestMockFn (func: any): func is jest.Mock {
-  return func._isMockFunction
+function isJestMockFn(func: any): func is jest.Mock {
+  return func._isMockFunction;
 }
 
 export const LiveChip1 = (props: ChipProps) => {
@@ -19,7 +19,7 @@ export const LiveChip1 = (props: ChipProps) => {
   // if (!isJestMockFn(onDelete)) {
   //   finalOnDelete =  onDelete
   // }
-  
+
   return <Chip color="primary" {...props} />;
 };
 
@@ -60,6 +60,12 @@ export default {
     },
     size: {
       defaultValue: "medium",
-    }
+    },
+  },
+  parameters: {
+    actions: { 
+      argTypesRegex: ""
+      // argTypesRegex: "^on.*"
+    },
   },
 };
