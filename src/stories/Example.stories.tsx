@@ -52,7 +52,7 @@ export const LiveChip1 = (props: ChipProps) => {
 // }
 
 export default {
-  title: "LiveChip",
+  title: "Example",
   component: LiveChip1,
   argTypes: {
     label: {
